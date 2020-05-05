@@ -5,12 +5,18 @@
 </head>
 <body>
 <div id="graphdiv2"
-  style="width:1024px; height:600px;"></div>
+  style="width:100%; height:600px;"></div>
+<div id="status" style="width: 200px; font-size: 0.8em; padding-top: 5px; display: none;"></div>
 <script type="text/javascript">
   g2 = new Dygraph(
     document.getElementById("graphdiv2"),
     "martin.csv", // path to CSV file
-    {}          // options
+    {
+        colors:['#eba534', '#6e34eb'],
+        labelsDiv: document.getElementById('status'),
+        labelsSeparateLines: true,
+        labelsKMB: true,
+    }          // options
   );
 </script>
 </body>
