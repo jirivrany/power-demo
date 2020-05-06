@@ -6,7 +6,10 @@
 <body>
 <div id="graphdiv2"
   style="width:100%; height:600px;"></div>
-<div id="status" style="width: 200px; font-size: 0.8em; padding-top: 5px; display: none;"></div>
+<div id="status" style="width: 200px; font-size: 0.8em; padding-top: 5px;"></div>
+<div id="graphdiv3"
+  style="width:100%; height:600px;"></div>
+<div id="status3" style="width: 200px; font-size: 0.8em; padding-top: 5px;"></div>
 <script type="text/javascript">
   g2 = new Dygraph(
     document.getElementById("graphdiv2"),
@@ -14,6 +17,18 @@
     {
         colors:['#eba534', '#6e34eb'],
         labelsDiv: document.getElementById('status'),
+        labelsSeparateLines: true,
+        labelsKMB: true,
+    }          // options
+  );
+</script>
+<script type="text/javascript">
+  g2 = new Dygraph(
+    document.getElementById("graphdiv3"),
+    "martin_diff.csv", // path to CSV file
+    {
+        colors:['#eeaa11', '#6e34eb'],
+        labelsDiv: document.getElementById('status3'),
         labelsSeparateLines: true,
         labelsKMB: true,
     }          // options
