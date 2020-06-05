@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript" src="/static/dygraph.min.js"></script>
+    <script type="text/javascript" src="/power-demo/static/dygraph.min.js"></script>
     <link rel="stylesheet" src="dygraph.css" />
 </head>
 
@@ -18,31 +18,31 @@
             </div>
             <div class="col-9">
                 
-                <a href="/1/" class="btn btn-info" role="button">Lap 1</a>
+                <a href="/power-demo/1/" class="btn btn-info" role="button">Lap 1</a>
 
                 
-                <a href="/2/" class="btn btn-info" role="button">Lap 2</a>
+                <a href="/power-demo/2/" class="btn btn-info" role="button">Lap 2</a>
 
                 
-                <a href="/3/" class="btn btn-info" role="button">Lap 3</a>
+                <a href="/power-demo/3/" class="btn btn-info" role="button">Lap 3</a>
 
                 
-                <a href="/4/" class="btn btn-info" role="button">Lap 4</a>
+                <a href="/power-demo/4/" class="btn btn-info" role="button">Lap 4</a>
 
                 
-                <a href="/5/" class="btn btn-info" role="button">Lap 5</a>
+                <a href="/power-demo/5/" class="btn btn-info" role="button">Lap 5</a>
 
                 
-                <a href="/6/" class="btn btn-info" role="button">Lap 6</a>
+                <a href="/power-demo/6/" class="btn btn-info" role="button">Lap 6</a>
 
                 
-                <a href="/7/" class="btn btn-info" role="button">Lap 7</a>
+                <a href="/power-demo/7/" class="btn btn-info" role="button">Lap 7</a>
 
                 
-                <a href="/8/" class="btn btn-info" role="button">Lap 8</a>
+                <a href="/power-demo/8/" class="btn btn-info" role="button">Lap 8</a>
 
                 
-                <a href="/9/" class="btn btn-info" role="button">Lap 9</a>
+                <a href="/power-demo/9/" class="btn btn-info" role="button">Lap 9</a>
 
                 
             </div>
@@ -76,7 +76,7 @@
     </div>
     <script type="text/javascript">
     g2 = new Dygraph(
-        document.getElementById("graphdiv2"), "/static/./data/lap5_gpr_gpa_pp.csv", // path to CSV file
+        document.getElementById("graphdiv2"), "/power-demo/static/data/lap5_gpr_gpa_pp.csv", // path to CSV file
         {
             colors: ['#edad3d', '#6e11eb', 'red', 'green', 'orange'],
             labelsDiv: document.getElementById('status1'),
@@ -86,7 +86,7 @@
         } // options
     );
     g3 = new Dygraph(
-        document.getElementById("graphdiv3"), "/static/./data/lap5_gpr_gpa.csv", // path to CSV file
+        document.getElementById("graphdiv3"), "/power-demo/static/data/lap5_gpr_gpa.csv", // path to CSV file
         {
             colors: ['#edad3d', '#6e11eb', 'red', 'green', 'orange'],
             labelsDiv: document.getElementById('status2'),
