@@ -2,62 +2,97 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript" src="dygraph.min.js"></script>
+    <script type="text/javascript" src="/static/dygraph.min.js"></script>
     <link rel="stylesheet" src="dygraph.css" />
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <h3>Favero (Wahoo unit) vs Stages (Garmin unit) - 30s vyhlazování</h3>
-            </div>    
+            <div class="col-3">
+                <h1>GPR + GPA lap 1</h1>
+                <h6>time: 853.797 s</h6>
+                <h6>distance: 4845.05 m</h6>
+                <h6>AVG power: 104 W</h6>
+                <h6>Normalized power: 145 W</h6>
+            </div>
+            <div class="col-9">
+                
+                <a href="/1" class="btn btn-info" role="button">Lap 1</a>
+
+                
+                <a href="/2" class="btn btn-info" role="button">Lap 2</a>
+
+                
+                <a href="/3" class="btn btn-info" role="button">Lap 3</a>
+
+                
+                <a href="/4" class="btn btn-info" role="button">Lap 4</a>
+
+                
+                <a href="/5" class="btn btn-info" role="button">Lap 5</a>
+
+                
+                <a href="/6" class="btn btn-info" role="button">Lap 6</a>
+
+                
+                <a href="/7" class="btn btn-info" role="button">Lap 7</a>
+
+                
+                <a href="/8" class="btn btn-info" role="button">Lap 8</a>
+
+                
+                <a href="/9" class="btn btn-info" role="button">Lap 9</a>
+
+                
+            </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <h3>GPR and GPA meanmax</h3>
+            </div>
+        </div>        
         <div class="row">
             <div class="col-10">
                 <div id="graphdiv2" style="width:100%; height:430px;"></div>
             </div>
             <div class="col-2">
-                <div id="status" style="font-size: 0.8em; padding-top: 5px;"></div>
+                <div id="status1" style="font-size: 0.8em; padding-top: 5px;"></div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">    
         <div class="row">
             <div class="col">
-                <h3>rozdíl Stages-Favero</h3>
-            </div>    
-        </div>
+                <h3>GPR and GPA průběh</h3>
+            </div>
+        </div>        
         <div class="row">
             <div class="col-10">
                 <div id="graphdiv3" style="width:100%; height:430px;"></div>
             </div>
             <div class="col-2">
-                <div id="status3" style="font-size: 0.8em; padding-top: 5px;"></div>
+                <div id="status2" style="font-size: 0.8em; padding-top: 5px;"></div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
     g2 = new Dygraph(
-        document.getElementById("graphdiv2"),
-        "martin.csv", // path to CSV file
+        document.getElementById("graphdiv2"), "/static/./data/lap1_gpr_gpa_pp.csv", // path to CSV file
         {
-            colors: ['#edad3d', '#6e11eb'],
-            labelsDiv: document.getElementById('status'),
+            colors: ['#edad3d', '#6e11eb', 'red', 'green', 'orange'],
+            labelsDiv: document.getElementById('status1'),
             labelsSeparateLines: true,
             labelsKMB: true,
+            logscale: true,
         } // options
     );
-    </script>
-    <script type="text/javascript">
-    g2 = new Dygraph(
-        document.getElementById("graphdiv3"),
-        "martin_diff.csv", // path to CSV file
+    g3 = new Dygraph(
+        document.getElementById("graphdiv3"), "/static/./data/lap1_gpr_gpa.csv", // path to CSV file
         {
-            colors: ['#eeaa11', '#6e34eb'],
-            labelsDiv: document.getElementById('status3'),
+            colors: ['#edad3d', '#6e11eb', 'red', 'green', 'orange'],
+            labelsDiv: document.getElementById('status2'),
             labelsSeparateLines: true,
             labelsKMB: true,
+            logscale: true,
         } // options
     );
     </script>
