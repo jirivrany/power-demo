@@ -5,349 +5,400 @@
     <script type="text/javascript" src="/power-demo/static/dygraph.min.js"></script>
     <link rel="stylesheet" src="dygraph.css" />
     <style type="text/css">
-    path {
-        fill: orange;
-    }
+        path {
+            fill: orange;
+        }
 
-    .heavy {
-        font-weight: bold;
-        font-size: 16px;
-        font-family: "Ubuntu", Helvetica, sans-serif;
-    }
+        .heavy {
+            font-weight: bold;
+            font-size: 16px;
+            font-family: "Ubuntu", Helvetica, sans-serif;
+        }
+
+        .main {
+            margin-top: 60px;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-3">
-                <h1>GPR + GPA lap 8</h1>
-            </div>
-            <div class="col-9">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ebcf00;">
+        <a class="navbar-brand" href="#">Cycling Biomechanic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/" role="button">Full ride</a>
+                </li>    
                 
-                <a href="/power-demo/1/" class="btn btn-info" role="button">Lap 1</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/1/"  role="button">Lap 1</a>
+                </li>    
                 
-                <a href="/power-demo/2/" class="btn btn-info" role="button">Lap 2</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/2/"  role="button">Lap 2</a>
+                </li>    
                 
-                <a href="/power-demo/3/" class="btn btn-info" role="button">Lap 3</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/3/"  role="button">Lap 3</a>
+                </li>    
                 
-                <a href="/power-demo/4/" class="btn btn-info" role="button">Lap 4</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/4/"  role="button">Lap 4</a>
+                </li>    
                 
-                <a href="/power-demo/5/" class="btn btn-info" role="button">Lap 5</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/5/"  role="button">Lap 5</a>
+                </li>    
                 
-                <a href="/power-demo/6/" class="btn btn-info" role="button">Lap 6</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/6/"  role="button">Lap 6</a>
+                </li>    
                 
-                <a href="/power-demo/7/" class="btn btn-info" role="button">Lap 7</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/7/"  role="button">Lap 7</a>
+                </li>    
                 
-                <a href="/power-demo/8/" class="btn btn-info" role="button">Lap 8</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning active" href="/power-demo/8/"  role="button">Lap 8</a>
+                </li>    
                 
-                <a href="/power-demo/9/" class="btn btn-info" role="button">Lap 9</a>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning " href="/power-demo/9/"  role="button">Lap 9</a>
+                </li>    
                 
-            </div>
+                
         </div>
-        <div class="row">
-            <div class="col-2">
-                <table class="table table-sm">
-                    <tbody>
-                        
-                        
-                        <tr class='thead-dark'>
-                            <th scope="row">stats for lap</th>
-                            <th>8 </th>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">time</th>
-                            <td>00:20:20 h:m:s</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">dist</th>
-                            <td>7368.6 m</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">avg power</th>
-                            <td>268 W</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">NP</th>
-                            <td>269 W</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">L/R</th>
-                            <td>51.0%/49.0% </td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">avg cadence</th>
-                            <td>73 rpm</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">pel. angle</th>
-                            <td>52.2 °</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">pel. rotation</th>
-                            <td>8.36 °</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <th scope="row">pel. rock</th>
-                            <td>8.27 °</td>
-                        </tr>
-                        
-                        
-                    </tbody>
-                </table>
-                <table class="table table-sm">
-                    <thead class='thead-dark'>
-                        <tr>
-                            <th scope="row">avg</th>
-                            <th>Left</th>
-                            <th>Right</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <th scope="row">GPR</th>
-                            
-                            <td>143.0 W</td>
-                            
-                            <td>140.0 W</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">GPA</th>
-                            
-                            <td>8.0 W</td>
-                            
-                            <td>9.0 W</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">NET</th>
-                            
-                            <td>135.0 W</td>
-                            
-                            <td>131.0 W</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">AR Q1</th>
-                            
-                            <td>20.61 °</td>
-                            
-                            <td>28.45 °</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">DSS</th>
-                            
-                            <td>0.3 </td>
-                            
-                            <td>0.46 </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">foot AR</th>
-                            
-                            <td>45.81 °</td>
-                            
-                            <td>51.22 °</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row">leg AR</th>
-                            
-                            <td>56.2 °</td>
-                            
-                            <td>56.39 °</td>
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
+    </nav>
+        <div class="container-fluid main">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Stats and charts for lap: 8</h1>
+                </div>
+                <div class="col-6">
+                    
+                </div>
             </div>
-            <div class="col-9">
-                <h3>GPR and GPA meanmax</h3>
-                <div id="graphdiv2" style="width:100%; height:430px;"></div>
-            </div>
-            <div class="col-1">
-                <div id="status1" style="font-size: 0.8em; padding-top: 5px;"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="col-9">
-                <h3>GPR and GPA průběh</h3>
-                <div id="graphdiv3" style="width:100%; height:430px;"></div>
-            </div>
-            <div class="col-1">
-                <div id="status2" style="font-size: 0.8em; padding-top: 5px;"></div>
-            </div>
-        </div>
-        <div class="row">
-             NP
-        </div>
-        <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="col-4">
-                <h3>Power phase</h3>
-                <svg width="300" height="300">
-                    <g id="phase_L" transform="translate(100, 100)"></g>
-                    <text x="80" y="100" class="heavy">LEFT</text>
-                </svg>
-                <svg width="300" height="300">
-                    <g id="phase_R" transform="translate(100, 100)"></g>
-                    <text x="80" y="100" class="heavy">RIGHT</text>
-                </svg>
-                <script>
-                // Create an arc generator with configuration
-                var arcGenerator = d3.arc();
-                //var phaseLeft = [6.209554326385362, 3.583379176491157, 3.632466562470489, 1.742602202266248];
-                var phaseLeft = [0.024543692989665463, 3.7551850274188157, 3.73064133442915, 1.8898643602042404];
-                var peakLeft = [1.104466184534946, 2.1353012901008954, 1.0308351055659495, 1.6198837373179207];
-                var phaseRight = [6.209554326385362, 3.7551850274188157, 3.8042724133981465, 1.8407769742249098];
-                var peakRight = [1.1780972635039422, 2.1843886760802262, 1.006291412576284, 1.6689711232972515];;
+            <div class="row">
+                <div class="col-2">
+                    <table class="table table-sm">
+                        <tbody>
+                            
+                            
+                            <tr class='thead-dark'>
+                                <th scope="row">stats for lap</th>
+                                <th>8 </th>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">time</th>
+                                <td>00:20:20 h:m:s</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">dist</th>
+                                <td>7368.6 m</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">avg power</th>
+                                <td>268 W</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">NP</th>
+                                <td>269 W</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">L/R</th>
+                                <td>51.0%/49.0% </td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">avg cadence</th>
+                                <td>73 rpm</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">pel. angle</th>
+                                <td>52.2 °</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">pel. rotation</th>
+                                <td>8.36 °</td>
+                            </tr>
+                            
+                            
+                            
+                            <tr>
+                                <th scope="row">pel. rock</th>
+                                <td>8.27 °</td>
+                            </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-4">
+                    <h3>Power phase</h3>
+                    <svg width="250" height="250">
+                        <g id="phase_L" transform="translate(125, 125)"></g>
+                        <text x="135" y="100" class="heavy">LEFT</text>
+                        <g fill="none" stroke="black">
+                            <path stroke-dasharray="5,5" stroke-width="0.75" d="M10 125 l240 0" />
+                        </g>
+                        <g fill="none" stroke="black">
+                            <path stroke-dasharray="5,5" stroke-width="0.75" d="M125 10 l0 240" />
+                        </g>
+                        <text x="129" y="22">0°</text>
+                        <text x="129" y="242">180°</text>
+                    </svg>
+                    <svg width="250" height="250">
+                        <g id="phase_R" transform="translate(125, 125)"></g>
+                        <text x="135" y="100" class="heavy">RIGHT</text>
+                        <g fill="none" stroke="black">
+                            <path stroke-dasharray="5,5" stroke-width="0.75" d="M10 125 l240 0" />
+                        </g>
+                        <g fill="none" stroke="black">
+                            <path stroke-dasharray="5,5" stroke-width="0.75" d="M125 10 l0 240" />
+                        </g>
+                        <text x="129" y="22">0°</text>
+                        <text x="129" y="242">180°</text>
+                    </svg>
+                    <script>
+                    // Create an arc generator with configuration
+                    var arcGenerator = d3.arc();
+                    //var phaseLeft = [6.209554326385362, 3.583379176491157, 3.632466562470489, 1.742602202266248];
+                    var phaseLeft = [0.024543692989665463, 3.7551850274188157, 3.73064133442915, 1.8898643602042404];
+                    var peakLeft = [1.104466184534946, 2.1353012901008954, 1.0308351055659495, 1.6198837373179207];
+                    var phaseRight = [6.209554326385362, 3.7551850274188157, 3.8042724133981465, 1.8407769742249098];
+                    var peakRight = [1.1780972635039422, 2.1843886760802262, 1.006291412576284, 1.6689711232972515];
 
-                // Generate the path string
-                var phasePathL = arcGenerator({
-                    startAngle: phaseLeft[1] - phaseLeft[2],
-                    endAngle: phaseLeft[1],
-                    innerRadius: 80,
-                    outerRadius: 100
-                });
+                    // Generate the path string
+                    var phasePathL = arcGenerator({
+                        startAngle: phaseLeft[1] - phaseLeft[2],
+                        endAngle: phaseLeft[1],
+                        innerRadius: 80,
+                        outerRadius: 100
+                    });
 
-                var peakPathL = arcGenerator({
-                    startAngle: peakLeft[1] - peakLeft[2],
-                    endAngle: peakLeft[1],
-                    innerRadius: 80,
-                    outerRadius: 105
-                });
+                    var peakPathL = arcGenerator({
+                        startAngle: peakLeft[1] - peakLeft[2],
+                        endAngle: peakLeft[1],
+                        innerRadius: 80,
+                        outerRadius: 105
+                    });
 
-                // Generate the path string
-                var phasePathR = arcGenerator({
-                    startAngle: phaseRight[1] - phaseRight[2],
-                    endAngle: phaseRight[1],
-                    innerRadius: 80,
-                    outerRadius: 100
-                });
+                    // Generate the path string
+                    var phasePathR = arcGenerator({
+                        startAngle: phaseRight[1] - phaseRight[2],
+                        endAngle: phaseRight[1],
+                        innerRadius: 80,
+                        outerRadius: 100
+                    });
 
-                var peakPathR = arcGenerator({
-                    startAngle: peakRight[1] - peakRight[2],
-                    endAngle: peakRight[1],
-                    innerRadius: 80,
-                    outerRadius: 105
-                });
+                    var peakPathR = arcGenerator({
+                        startAngle: peakRight[1] - peakRight[2],
+                        endAngle: peakRight[1],
+                        innerRadius: 80,
+                        outerRadius: 105
+                    });
 
-                // Create a path element and set its d attribute
-                d3.select('#phase_L')
-                    .append('path')
-                    .attr('d', phasePathL)
-                    .style("fill", "#31a2f7");
+                    // Create a path element and set its d attribute
+                    d3.select('#phase_L')
+                        .append('path')
+                        .attr('d', phasePathL)
+                        .style("fill", "#31a2f7");
 
-                d3.select('#phase_L')
-                    .append('path')
-                    .attr('d', peakPathL)
-                    .style("fill", "#1884d6");
+                    d3.select('#phase_L')
+                        .append('path')
+                        .attr('d', peakPathL)
+                        .style("fill", "#1884d6");
 
 
-                // Create a path element and set its d attribute
-                d3.select('#phase_R')
-                    .append('path')
-                    .attr('d', phasePathR)
-                    .style("fill", "#ebc634");
+                    // Create a path element and set its d attribute
+                    d3.select('#phase_R')
+                        .append('path')
+                        .attr('d', phasePathR)
+                        .style("fill", "#ebc634");
 
-                d3.select('#phase_R')
-                    .append('path')
-                    .attr('d', peakPathR)
-                    .style("fill", "#eba834");
-                </script>
+                    d3.select('#phase_R')
+                        .append('path')
+                        .attr('d', peakPathR)
+                        .style("fill", "#eba834");
+                    </script>
+                </div>
+                <div class="col-6">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>LEG</th>
+                                <th>phase start</th>
+                                <th>phase end</th>
+                                <th>peak start</th>
+                                <th>peak end</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    LEFT
+                                </th>
+                                <td>
+                                    1.41°
+                                </td>
+                                <td>
+                                    215.16°
+                                </td>
+                                <td>
+                                    63.28°
+                                </td>
+                                <td>
+                                    122.34°
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    RIGHT
+                                </th>
+                                <td>
+                                    355.78°
+                                </td>
+                                <td>
+                                    215.16°
+                                </td>
+                                <td>
+                                    67.5°
+                                </td>
+                                <td>
+                                    125.16°
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="col-6">
-                <table class="table">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th>LEG</th>
-                        <th>phase start</th>
-                        <th>phase end</th>
-                        <th>peak start</th>
-                        <th>peak end</th>
-                    </tr>           
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th>
-                            LEFT
-                        </th>    
-                        <td>
-                            1.41° 
-                        </td>
-                        <td>
-                            215.16° 
-                        </td>
-                        <td>
-                            63.28° 
-                        </td>
-                        <td>
-                            122.34° 
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            RIGHT
-                        </th>    
-                        <td>
-                            355.78° 
-                        </td>
-                        <td>
-                            215.16° 
-                        </td>
-                        <td>
-                            67.5° 
-                        </td>
-                        <td>
-                            125.16° 
-                        </td>
-                    </tr>                        
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-2">
+                    <table class="table table-sm">
+                        <thead class='thead-dark'>
+                            <tr>
+                                <th scope="row">avg</th>
+                                <th>Left</th>
+                                <th>Right</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <th scope="row">GPR</th>
+                                
+                                <td>143.0 W</td>
+                                
+                                <td>140.0 W</td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">GPA</th>
+                                
+                                <td>8.0 W</td>
+                                
+                                <td>9.0 W</td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">NET</th>
+                                
+                                <td>135.0 W</td>
+                                
+                                <td>131.0 W</td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">AR Q1</th>
+                                
+                                <td>20.61 °</td>
+                                
+                                <td>28.45 °</td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">DSS</th>
+                                
+                                <td>0.3 </td>
+                                
+                                <td>0.46 </td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">foot AR</th>
+                                
+                                <td>45.81 °</td>
+                                
+                                <td>51.22 °</td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">leg AR</th>
+                                
+                                <td>56.2 °</td>
+                                
+                                <td>56.39 °</td>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-9">
+                    <h3>GPR and GPA meanmax</h3>
+                    <div id="graphdiv2" style="width:100%; height:430px;"></div>
+                </div>
+                <div class="col-1">
+                    <div id="status1" style="font-size: 0.8em; padding-top: 5px;"></div>
+                </div>
             </div>
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-9">
+                    <h3>GPR and GPA průběh</h3>
+                    <div id="graphdiv3" style="width:100%; height:430px;"></div>
+                </div>
+                <div class="col-1">
+                    <div id="status2" style="font-size: 0.8em; padding-top: 5px;"></div>
+                </div>
+            </div>
+        </div>    
+    
     <script type="text/javascript">
     g2 = new Dygraph(
         document.getElementById("graphdiv2"), "/power-demo/static/data/lap8_gpr_gpa_pp.csv", // path to CSV file
